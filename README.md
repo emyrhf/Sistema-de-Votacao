@@ -1,6 +1,7 @@
 # Sistema de Votação 2025
 
 Projeto em Java para simular um sistema de votação com registro aleatório de votos por seção e por candidato, cálculo de estatísticas e geração de arquivo de resultados.
+
 **Nota: O ano decrito no código é meramente ilustrativo e não corresponde a eleições reais.**
 
 ---
