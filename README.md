@@ -1,32 +1,65 @@
 # Sistema de Votação 2025
 
-Projeto em Java para simular um sistema de votação com registro aleatório de votos por seção e por candidato, cálculo de estatísticas e geração de arquivo de resultados.
+Sistema em Java para simulação de votação com geração aleatória de votos, organização por seção e candidato, análise estatística e exportação de resultados para arquivo ``.txt``.
 
 **Nota: O ano decrito no código é meramente ilustrativo e não corresponde a eleições reais.**
 
 ---
 
-## Autor
+## Visão Geral
 
-**Emily Rharysa**
+O projeto simula um processo de votação com 200 eleitores distribuídos em 10 seções, gerando automaticamente votos aleatórios para candidatos. A partir desses dados, o sistema realiza o processamento e a análise dos resultados.
 
 ---
 
-## Descrição
+## Demonstração
+### Menu principal do sistema
+<p align="center">
+  <img src="imgs/menu.png" width="350"/>
+</p>
 
-Este projeto implementa um sistema de votação simplificado que permite:
+### Menu "Mostrar Indicadores"
+<p align="center">
+  <img src="imgs/menu2.png" width="350"/>
+</p>
 
-- Gerar votos aleatórios para 200 eleitores distribuídos em 10 seções.
-- Registrar o número do candidato e a seção de cada voto.
-- Classificar os votos por seção.
-- Gerar um arquivo `Votacao2025.txt` com os registros de votos.
-- Exibir indicadores e estatísticas de votação, incluindo:
-  - Quantidade de eleitores por seção.
-  - Seção com maior e menor número de eleitores.
-  - Quantidade de votos por candidato.
-  - Os 10 candidatos mais votados.
+### Geração de dados no sistema
+<p align="center">
+  <img src="imgs/geracao-dados.png" width="400"/>
+</p>
 
-O projeto é desenvolvido com interface simples usando `JOptionPane` para interação com o usuário.
+### Estatísticas geradas
+<p align="center">
+  <img src="imgs/estatistica.png" width="300"/>
+</p>
+<p align="center">
+  <img src="imgs/estatistica2.png" width="300"/>
+</p>
+<p align="center">
+  <img src="imgs/estatistica3.png" width="300"/>
+</p>
+<p align="center">
+  <img src="imgs/estatistica4.png" width="300"/>
+</p>
+
+
+## Arquivo Votacao2025.txt
+<p align="center">
+  <img src="imgs/arquivo.png" width="600"/>
+</p>
+
+---
+
+## Funcionalidades
+- Geração automática de votos para 200 eleitores
+- Distribuição de votos entre 10 seções
+- Registro de número de candidato e seção
+- Classificação dos votos por seção
+- Identificação de:
+  - Seção com mais e menos eleitores
+  - Quantidade de votos por candidato
+  - Top 10 candidatos mais votados
+- Geração de arquivo ``.txt`` com os registros
 
 ---
 
@@ -41,25 +74,40 @@ O projeto é desenvolvido com interface simples usando `JOptionPane` para intera
 
 ---
 
-## Funcionalidades
+## Fluxo do sistema
 
-1. **Carregar votos aleatórios**  
-   Gera votos para 200 eleitores, com seções de 1 a 10 e candidatos de 1 a 300.
+```mermaid
+flowchart TD
+A[Início] --> B[Gerar votos automaticamente]
 
-2. **Classificar votos por seção**  
-   Organiza os registros por número de seção para facilitar análise.
+B --> C[200 eleitores / 10 seções / candidatos aleatórios]
 
-3. **Gravar registros em arquivo**  
-   Cria o arquivo `Votacao2025.txt`, contendo o número da seção e do candidato para cada voto.
+C --> D[Classificação dos votos por seção]
 
-4. **Mostrar indicadores**  
-   Apresenta, via `JOptionPane`:
-   - Quantidade de eleitores por seção.
-   - Seção com maior e menor número de eleitores.
-   - Quantidade de votos por candidato.
-   - Top 10 candidatos mais votados.
+D --> E[Processamento estatístico]
 
----
+E --> F1[Qtd de eleitores por seção]
+E --> F2[Seção com mais e menos votos]
+E --> F3[Votos por candidato]
+E --> F4[Top 10 candidatos]
+
+F1 --> G[Exibição dos resultados]
+F2 --> G
+F3 --> G
+F4 --> G
+
+G --> H[Geração do arquivo Votacao2025.txt]
+H --> I[Fim]
+```
+
+## 🧰 Tecnologias Utilizadas
+
+| Tecnologia | Uso principal |
+|-------------|----------------|
+|  **Java SE** | Linguagem base |
+|  **JOptionPane (Swing)** | Interface de entrada e saída |
+|  **BufferedWriter / FileWriter** | Manipulação de arquivos |
+|  **Random** | Geração automática de dados |
 
 ## Como Executar
 
@@ -78,3 +126,10 @@ javac ClassePrincipal.java ClasseMetodos.java Votacao.java
 ```
 java ClassePrincipal
 ```
+
+---
+
+👩‍💻 Autora
+Emily Rharysa
+💻 Desenvolvedora Web | Estudante de Tecnologia
+📫 [LinkedIn](https://www.linkedin.com/in/emyrhf/)
