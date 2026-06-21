@@ -129,7 +129,7 @@ java ClassePrincipal
 
 ---
 
-👩‍💻 Autora
-Emily Rharysa
-💻 Desenvolvedora Web | Estudante de Tecnologia
-📫 [LinkedIn](https://www.linkedin.com/in/emyrhf/)
+## 👩‍💻 Autora
+### Emily Rharysa
+#### 💻 Desenvolvedora Web | Estudante de Tecnologia
+#### 📫 [LinkedIn](https://www.linkedin.com/in/emyrhf/)
